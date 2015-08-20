@@ -1,0 +1,7 @@
+> constantcontact = ConstantContact(api_key, access_token)
+> 
+> contact_list = constantcontact.get_lists()[2]
+>
+> response = constantcontact.delete_list(contact_list)
+> print response
+&lt;Response [204]&gt;

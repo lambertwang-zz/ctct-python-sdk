@@ -1,0 +1,20 @@
+> constantcontact = ConstantContact(api_key, access_token)
+> 
+> event = constantcontact.get_events().get_item(0)
+>
+> fee = constantcontact.get_event_fees(event)[0]
+> 
+> fee.set_early_fee(8)
+> fee.set_late_fee(12)
+> 
+> response = constantcontact.update_event_fee(event, fee)
+> print json.dumps(response, indent = 4, sort_keys = True)
+{
+    "early_fee": 8.0, 
+    "fee": 10.0, 
+    "fee_scope": "BOTH", 
+    "has_restricted_access": false, 
+    "id": "qwertyuiopasdfghjklzxcvbnm", 
+    "label": "Entrance Fee", 
+    "late_fee": 12.0
+}

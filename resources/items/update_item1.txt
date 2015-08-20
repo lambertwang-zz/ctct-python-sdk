@@ -1,0 +1,19 @@
+> constantcontact = ConstantContact(api_key, access_token)
+> 
+> event = constantcontact.get_events().get_item(0)
+>
+> item = constantcontact.get_event_items(event)[0]
+> item.set_price(3)
+> 
+> response = constantcontact.update_event_item(event, item)
+> print json.dumps(response, indent = 4, sort_keys = True)
+{
+    "attributes": [], 
+    "default_quantity_available": 10, 
+    "default_quantity_total": 10, 
+    "id": "thisisfakedata", 
+    "name": "Cauldrons", 
+    "per_registrant_limit": 1, 
+    "price": 3.0, 
+    "show_quantity_available": false
+}

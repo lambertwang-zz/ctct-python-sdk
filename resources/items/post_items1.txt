@@ -1,0 +1,22 @@
+> constantcontact = ConstantContact(api_key, access_token)
+> 
+> event = constantcontact.get_events().get_item(0)
+>
+> item = Item()
+> item.set_default_quantity_total(10)
+> item.set_name('Cauldrons')
+> item.set_per_registrant_limit(1)
+> item.set_price(4)
+> 
+> response = constantcontact.post_event_items(event, item)
+> print json.dumps(response, indent = 4, sort_keys = True)
+{
+    "attributes": [], 
+    "default_quantity_available": 10, 
+    "default_quantity_total": 10, 
+    "id": "thisisfakedata", 
+    "name": "Cauldrons", 
+    "per_registrant_limit": 1, 
+    "price": 4.0, 
+    "show_quantity_available": false
+}

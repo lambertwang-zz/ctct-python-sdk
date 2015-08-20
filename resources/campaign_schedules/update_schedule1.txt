@@ -1,0 +1,14 @@
+> constantcontact = ConstantContact(api_key, access_token)
+> 
+> campaign = constantcontact.get_campaigns().get_item(0)
+> schedule = constantcontact.get_campaign_schedules(campaign)[0]
+>
+> date = (datetime.now() + timedelta(days=2)).replace(minute=0)
+> schedule.set_scheduled_date(date.isoformat())
+> 
+> response = constantcontact.update_campaign_schedule(campaign, schedule)
+> print json.dumps(response, indent = 4, sort_keys = True)
+{
+    "id": "1", 
+    "scheduled_date": "2015-01-03T00:00:00.000Z"
+}

@@ -1,0 +1,49 @@
+<h2>Getting Started</h2>
+<div id="docs">
+
+<div id="methodname">Welcome to the Constant Contact Python SDK help pages!</div>
+
+<span id="methoddesc">
+    Using the SDK is super easy. If you haven't already, you can get started using the Constant Contact API by following the directions on our <a href="http://developer.constantcontact.com/get-started.html">developer portal</a>.
+</span>
+<span id="methoddesc">
+    The libraries can be obtained through pip
+</span>
+<div class="code">$ pip install constantcontact
+</div>
+
+<span id="methoddesc">
+    And here's a short code sample to get you started
+</span>
+<div class="code">> from constantcontact import ConstantContact
+> ctct = ConstantContact({api_key}, {access_token})
+> print json.dumps(ctct.get_account_info(), indent=4)
+{
+    "website": "constantcontact.com",
+    "organization_name": "ConstantContact",
+    "time_zone": "US/Eastern",
+    "first_name": "Lambert",
+    "last_name": "Wang",
+    "email": "lambert_wang@example.com",
+    "phone": "1234567890",
+    "company_logo": "",
+    "country_code": "US",
+    "state_code": "MA",
+    "organization_addresses": [
+        {
+            "city": "Waltham",
+            "line1": "1601 Trapelo rd",
+            "postal_code": "02451",
+            "country_code": "US",
+            "state_code": "MA",
+            "state": "Massachusetts"
+        }
+    ]
+}
+</div>
+
+<span id="methoddesc">
+    Good luck and have fun!
+</span>
+
+</div>

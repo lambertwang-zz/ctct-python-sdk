@@ -1,0 +1,15 @@
+> constantcontact = ConstantContact(api_key, access_token)
+> 
+> contact = constantcontact.get_contacts().get_item(0)
+>
+> response =  constantcontact.get_contact_tracking_summary(contact)
+> print json.dumps(response, indent = 4, sort_keys = True)
+{
+    "sends": 5,
+    "opens": 3,
+    "clicks": 2,
+    "forwards": 0,
+    "unsubscribes": 0,
+    "bounces": 2,
+    "contact_id": "1234567890"
+}

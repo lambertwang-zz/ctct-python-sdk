@@ -1,0 +1,33 @@
+> constantcontact = ConstantContact(api_key, access_token)
+>
+> response = constantcontact.get_trash()
+> print json.dumps(response, indent = 4, sort_keys = True)
+{
+    "meta": {
+        "pagination": {}
+    }, 
+    "results": [
+        {
+            "created_date": "2015-01-01T00:00:00.000z", 
+            "description": "The map of the FORBIDDEN FOREST", 
+            "file_type": "PNG", 
+            "folder": "maps_elven_territory", 
+            "folder_id": "-9", 
+            "height": 4096, 
+            "id": "20", 
+            "is_image": true, 
+            "modified_date": "2015-01-01T00:00:00.000z", 
+            "name": "elven_forest_map", 
+            "size": 999999, 
+            "source": "MyComputer", 
+            "status": "Deleted", 
+            "thumbnail": {
+                "height": 200, 
+                "url": "thumbnail url goes here", 
+                "width": 200
+            }, 
+            "url": "image url goes here", 
+            "width": 4096
+        }
+    ]
+}

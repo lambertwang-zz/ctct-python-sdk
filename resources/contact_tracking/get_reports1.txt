@@ -1,0 +1,34 @@
+> constantcontact = ConstantContact(api_key, access_token)
+> 
+> contact = constantcontact.get_contacts().get_item(0)
+>
+> response = constantcontact.get_contacts_report_by_campaign(campaign)
+> print json.dumps(response, indent = 4, sort_keys = True)
+{
+    "results": [
+        {
+            "campaign_id": "1234567890123",
+            "bounces": 1,
+            "clicks": 2,
+            "contact_id": "0987654321",
+            "forwards": 0,
+            "opens": 3
+        },
+        {
+            "campaign_id": "0987654321098",
+            "bounces": 0,
+            "clicks": 1,
+            "contact_id": "0987654321",
+            "forwards": 1,
+            "opens": 2
+        },
+        {
+            "campaign_id": "3141592653589",
+            "bounces": 0,
+            "clicks": 0,
+            "contact_id": "0987654321",
+            "forwards": 0,
+            "opens": 1
+        }
+    ]
+}

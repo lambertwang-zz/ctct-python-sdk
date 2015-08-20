@@ -1,0 +1,31 @@
+> constantcontact = ConstantContact(api_key, access_token)
+> 
+> campaign = constantcontact.get_campaigns().get_item(0)
+> 
+> response = constantcontact.get_campaign_clicks(campaign)
+> print json.dumps(response, indent = 4, sort_keys = True)
+{
+    "meta": {
+        "pagination": {
+            "next_link": "/v2/emailmarketing/campaigns/1234567890123/tracking/clicks?next=abcdefghijklmnopqrstuvw"
+        }
+    }, 
+    "results": [
+        {
+            "activity_type": "EMAIL_CLICK",
+            "campaign_id": "1234567890123",
+            "click_date": "2015-01-01T00:00:00.000Z",
+            "contact_id": "1234",
+            "email_address": "user1@example.com",
+            "link_id": "1"
+        },
+        {
+            "activity_type": "EMAIL_CLICK",
+            "campaign_id": "1234567890123",
+            "click_date": "2015-01-01T00:00:00.000Z",
+            "contact_id": "4321",
+            "email_address": "user2@example.com",
+            "link_id": "2"
+        }
+    ]
+}

@@ -1,0 +1,16 @@
+> constantcontact = ConstantContact(api_key, access_token)
+>
+> new_folder = Mylibrary_Folder()
+> new_folder.set_name('loot_tables')
+> 
+> response = constantcontact.post_folders(new_folder)
+> print json.dumps(response, indent = 4, sort_keys = True)
+{
+    "children": [], 
+    "created_date": "2015-01-01T00:00:00.000z", 
+    "id": "-6", 
+    "item_count": 0, 
+    "level": 1, 
+    "modified_date": "2015-01-01T00:00:00.000z", 
+    "name": "loot_tables"
+}

@@ -1,0 +1,21 @@
+> constantcontact = ConstantContact(api_key, access_token)
+> 
+> event = constantcontact.get_events().get_item(0)
+>
+> pc = constantcontact.get_event_promocodes(event)[0]
+>
+> response = constantcontact.get_event_promocode(event, pc)
+> print json.dumps(response, indent = 4, sort_keys = True)
+{
+    "code_name": "TEST_CODE", 
+    "code_type": "DISCOUNT", 
+    "discount_percent": 10, 
+    "discount_scope": "ORDER_TOTAL", 
+    "discount_type": "PERCENT", 
+    "id": "someexamplepromocodeidgoeshere", 
+    "is_paused": false, 
+    "quantity_available": -1, 
+    "quantity_total": -1, 
+    "quantity_used": 0, 
+    "status": "LIVE"
+}

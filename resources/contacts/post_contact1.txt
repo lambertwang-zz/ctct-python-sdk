@@ -1,0 +1,50 @@
+> constantcontact = ConstantContact(api_key, access_token)
+> 
+> new_contact = Contact()
+> new_contact.set_first_name('Harry')
+> new_contact.set_last_name('Potter')
+> new_contact.set_job_title('Wizard')
+> new_contact.set_company_name('Hogwarts')
+> new_contact.add_list_id(0987654321)
+> new_contact.set_email_address('hpotter86@owlmail.com')
+> 
+> response = constantcontact.post_contacts(new_contact)
+> print json.dumps(response, indent = 4, sort_keys = True)
+{
+    "addresses": [], 
+    "cell_phone": "", 
+    "company_name": "Hogwarts", 
+    "confirmed": false, 
+    "created_date": "1997-06-29T01:00:00.000Z", 
+    "custom_fields": [], 
+    "email_addresses": [
+        {
+            "confirm_status": "NO_CONFIRMATION_REQUIRED", 
+            "email_address": "hpotter86@owlmail.com", 
+            "id": "00000000-0000-0000-0000-000000000000", 
+            "opt_in_date": "1997-06-29T01:00:00.000Z", 
+            "opt_in_source": "ACTION_BY_OWNER", 
+            "status": "ACTIVE"
+        }
+    ], 
+    "fax": "", 
+    "first_name": "Harry", 
+    "home_phone": "", 
+    "id": "1234567890", 
+    "job_title": "Wizard", 
+    "last_name": "Potter", 
+    "lists": [
+        {
+            "id": "0987654321", 
+            "status": "ACTIVE"
+        }
+    ], 
+    "middle_name": "", 
+    "modified_date": "1997-06-29T01:00:00.000Z", 
+    "notes": [], 
+    "prefix_name": "", 
+    "source": "API", 
+    "source_details": "testApp", 
+    "status": "ACTIVE", 
+    "work_phone": ""
+}

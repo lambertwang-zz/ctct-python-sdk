@@ -1,0 +1,63 @@
+> constantcontact = ConstantContact(api_key, access_token)
+> 
+> contact = constantcontact.get_contacts().get_item(0)
+>
+> response = constantcontact.get_contact_tracking(contact)
+> print json.dumps(response, indent = 4, sort_keys = True)
+{
+    "meta": {
+        "pagination": {
+            "next_link": "/v2/contacts/1/tracking?next=abcdefghijklmnopqrstuvw"
+        }
+    },
+    "results": [
+        {
+            "activity_type": "EMAIL_UNSUBSCRIBE",
+            "campaign_id": "1234567890123",
+            "contact_id": "10987654321",
+            "email_address": "xyz@example.com",
+            "unsubscribe_date": "2015-01-01T00:00:00.000Z",
+            "unsubscribe_reason": "No longer use this product and service",
+            "unsubscribe_source": "ACTION_BY_CONTACT"
+        },
+        { 
+            "activity_type": "EMAIL_FORWARD",
+            "campaign_id": "1234567890123",
+            "contact_id": "10987654321",
+            "email_address": "xyz@example.com",
+            "forward_date": "2015-01-01T00:00:00.000Z"
+        },    
+        {
+            "activity_type": "EMAIL_CLICK",
+            "campaign_id": "1234567890123",
+            "click_date": "2015-01-01T00:00:00.000Z",
+            "contact_id": "10987654321",
+            "email_address": "xyz@example.com",
+            "link_id": "1",
+            "link_uri": "http://www.example.com"
+        },      
+        {
+            "activity_type": "EMAIL_OPEN",
+            "campaign_id": "1234567890123",
+            "contact_id": "10987654321",
+            "email_address": "xyz@example.com",
+            "open_date": "2015-01-01T00:00:00.000Z"
+        },
+        {
+            "activity_type": "EMAIL_SEND",
+            "campaign_id": "1234567890123",
+            "contact_id": "10987654321",
+            "send_date": "2015-01-01T00:00:00.000Z"
+        },
+        {
+            "activity_type": "EMAIL_BOUNCE",
+            "bounce_code": "B",
+            "bounce_date": "2015-01-01T00:00:00.000Z",
+            "bounce_description": "Non-existent address",
+            "bounce_message": "",
+            "campaign_id": "1234567890123",
+            "contact_id": "10987654321",
+            "email_address": "abc@example.com"
+        }
+    ]
+}

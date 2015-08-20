@@ -1,0 +1,13 @@
+> constantcontact = ConstantContact(api_key, access_token)
+> 
+> lists = [constantcontact.get_lists()[0].get_id()]
+> columns = ['EMAIL', 'FIRST NAME']
+> 
+> response = constantcontact.export_contacts(columns, lists)
+> print json.dumps(response, indent = 4, sort_keys = True)
+{
+    "contact_count": 0, 
+    "error_count": 0, 
+    "id": "1a2b3c4d-5e6f-7g8h-9i0j-1k2l3m4n5o6p",
+    "type": "EXPORT_CONTACTS"
+}

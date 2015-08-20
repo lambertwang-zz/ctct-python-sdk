@@ -1,0 +1,309 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font: 18px Arial, sans-serif;
+  -moz-box-sizing:border-box;
+  -webkit-box-sizing:border-box;
+  box-sizing:border-box;
+  word-wrap: break-word;
+}
+html {
+  background: rgb(240, 255, 255);
+}
+:focus {outline:none;} ::-moz-focus-inner {border:0;}
+body {
+  display: block;
+}
+header {
+  position: absolute;
+  left: 0;
+  right: 0;
+  text-align: center;
+  border-bottom: 2px solid rgb(12, 90, 180);
+  padding: 0px;
+  height: 72px;
+  color: rgb(208, 224, 255);
+  min-width: 512px;
+  background: rgb(2, 36, 84);
+  background: linear-gradient(to right, rgb(8, 64, 120), rgb(2, 36, 84), rgb(8, 64, 120)); /* Standard syntax */
+}
+.ext-link, #hide-sidebar, #sidebar-nav, .change-content, .expand-drop-down, .collapse-drop-down, #expander, #sidebar, #return-top {
+  -webkit-user-select: none;  /* Chrome all / Safari all */
+  -moz-user-select: none;     /* Firefox all */
+  -ms-user-select: none;      /* IE 10+ */
+  user-select: none;          /* Likely future */    
+}
+.ext-link {
+  position: absolute;
+  top: 14px;
+  background: rgb(255, 204, 0);
+  padding: 2px;
+  color: #000000;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+
+  -webkit-transition: background 0.2s;
+  transition: background 0.2s;
+}
+.ext-link:hover {
+  background: rgb(255, 240, 40);
+  text-decoration: underline;
+  color: #000000;
+
+  -webkit-transition: background 0.2s;
+  transition: background 0.2s;
+}
+a#ctct-link {
+  right: 16px;
+}
+a#gh-link {
+  left: 16px;
+}
+span#link {
+  margin-left: 8px;
+  margin-right: 8px;
+}
+h1 {
+  font-size: 22px;
+  font-weight: bold;
+}
+h2 {
+  font-size: 20px;
+  font-weight: bold;
+  left: 0px;
+  right: 0px;
+  padding: 12px;
+  padding-left: 32px;
+  border-bottom: 2px solid rgb(12, 90, 180);
+}
+#wrapper {
+  position: absolute;
+  top: 72px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+}
+#sidebar {
+  float: left;
+  width: 176px;
+  min-width: 176px;
+  bottom: 0;
+  top: 72px;
+  left: 0px;
+  position: fixed;
+  overflow: auto;
+  padding: 12px;
+  border-right: 2px solid rgb(12, 90, 180);
+  color: rgb(232, 244, 255);
+  background: rgb(6, 56, 108);
+  background: linear-gradient(rgb(6, 56, 108), rgb(2, 40, 76)); /* Standard syntax */
+
+  -webkit-transition: left 0.2s;
+  transition: left 0.2s;
+}
+::-webkit-scrollbar{
+  background:transparent;
+}
+
+::-webkit-scrollbar{
+  width:0px;
+}
+#hide-sidebar {
+  position: fixed;
+  top: 72px;
+  width: 16px;
+  left: 176px;
+  bottom: 0px;
+  padding: 2px;
+  display: flex;
+  align-items: center;
+  color: rgb(255, 255, 255);
+  background: rgb(4, 72, 160);
+  /*background: linear-gradient(rgb(12, 90, 180), rgb(4, 48, 128), rgb(12, 90, 180)); /* Standard syntax */
+
+  -webkit-transition: left 0.2s, background 0.2s;
+  transition: left 0.2s, background 0.2s;
+}
+#hide-sidebar:hover {
+  background: rgb(16, 108, 224);
+  /*background: linear-gradient(rgb(20, 128, 255), rgb(12, 90, 180), rgb(20, 128, 255)); /* Standard syntax */
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+
+  -webkit-transition: left 0.2s, background 0.2s;
+  transition: left 0.2s, background 0.2s;
+}
+#sidebar-nav {
+  margin-top: 6px;
+  margin-bottom: 3px;
+  font-size: 16px;
+  color: #ffffff;
+}
+.change-content, .expand-drop-down, .collapse-drop-down {
+  margin-bottom: 4px;
+  margin-top: 1px;
+  color: rgb(159, 191, 239);
+  text-indent: -8px;
+  padding-left: 12px;
+  line-height: 1.1;
+
+  -webkit-transition: color 0.2s, background 0.2s, border-color 0.2s;
+  transition: color 0.2s, background 0.2s, border-color 0.2s;
+}
+.change-content:hover, .expand-drop-down:hover, .collapse-drop-down:hover {
+  cursor: pointer;
+  color: rgb(4, 48, 92);
+  background: rgb(159, 191, 239);
+  border-color: #ffffff;
+
+  -webkit-transition: color 0.2s, background 0.2s, border-color 0.2s;
+  transition: color 0.2s, background 0.2s, border-color 0.2s;
+}
+.change-content {
+  border-left: 2px solid rgb(159, 191, 239);
+  margin-left: 4px;
+  margin-bottom: 0px;
+  margin-top: 0px;
+  padding-bottom: 4px;
+  padding-top: 1px;
+}
+.drop-down {
+  overflow: hidden;
+  
+  -webkit-transition: max-height 0.2s;
+  transition: max-height 0.2s;
+}
+div#expanded {
+  color: rgb(4, 48, 92);
+  background: rgb(80, 108, 160);
+
+  -webkit-transition: color 0.2s, background 0.2s;
+  transition: color 0.2s, background 0.2s;
+}
+div#expanded:hover {
+  cursor: pointer;
+  background: #ffffff;
+
+  -webkit-transition: color 0.2s, background 0.2s;
+  transition: color 0.2s, background 0.2s;
+}
+#content {
+  left: 192px;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  min-height: 100%;
+  background: rgb(240, 255, 255);
+  min-width: 320px;
+
+  -webkit-transition: left 0.2s;
+  transition: left 0.2s;
+}
+#docs {
+  padding: 12px;
+  padding: 6px;
+  margin: 4px;
+  margin-left: 8px;
+  margin-top: 0;
+}
+.code {
+  font-family: "Courier New";
+  margin: 6px;
+  background: linear-gradient(to right, #ffffff, #fdfdfd);
+  padding: 8px;
+  border: 2px outset #dddddd;
+  white-space: pre-wrap;
+  font-size: 16px;
+  margin-left: 32px;
+  margin-right: 16px;
+  max-width: 800px;
+}
+#expander {
+  font-family: "Courier New";
+  font-size: 16px;
+  max-width: 230px;
+  cursor: pointer;
+  font-weight: bold;
+  text-decoration: underline;
+  margin: 4px;
+  left: 0px;
+  padding: 3px;
+  border: 1px solid #808080;
+  text-align: center;
+  margin-bottom: 8px;
+  background: #f0f0f0;
+  /*background: linear-gradient(to right, #f0f0f0, #ffffff, #f0f0f0);*/
+
+  -webkit-transition: background 0.2s;
+  transition: background 0.2s;
+}
+#expander:hover {
+  background: #e0e0e0;
+  /*background: linear-gradient(to right, #e0e0e0, #f0f0f0, #e0e0e0);*/
+
+  -webkit-transition: background 0.2s;
+  transition: background 0.2s;
+}
+#code-holder {
+  font-family: "Courier New";
+  font-size: 16px;
+  max-height: 0;
+  overflow: hidden;
+
+  -webkit-transition: max-height 0.4s ease-in-out;
+  transition: max-height 0.4s ease-in-out;
+}
+#code-holder-visible {
+  font-family: "Courier New";
+  display: block;
+  font-size: 16px;
+}
+#methodname, #varname {
+  font-family: monospace;
+}
+#methodname {
+  margin-top: 8px;
+  font-size: 18px;
+  font-weight: bold;
+}
+a#methodname {
+  text-decoration: underline;
+}
+#varname {
+  color: #000000;
+  font-weight: bold;
+}
+#methoddesc {
+  margin-top: 8px;
+  margin-left: 16px;
+  display: block;
+}
+a, div.change-view {
+  font-family: "Courier New";
+  color: rgb(6, 107, 199);
+  text-decoration: none;
+  display: inline;
+  font-weight: bold;
+}
+a:hover, div.change-view:hover {
+  color: rgb(70, 171, 255);
+  text-decoration: underline;
+  cursor: pointer;
+}
+#return-top {
+  display: none;
+  position: fixed;
+  right: 32px;
+  bottom: 32px;
+  font-size:16px;
+  background: linear-gradient(rgb(4, 70, 140), rgb(12, 90, 180)); /* Standard syntax */
+  padding: 4px;
+  color: rgb(255, 255, 255);
+  border: 2px solid rgb(12, 90, 180);
+  border-radius: 4px;
+}
+#return-top:hover {
+  background: linear-gradient(rgb(12, 90, 180), rgb(20, 110, 220)); /* Standard syntax */
+}

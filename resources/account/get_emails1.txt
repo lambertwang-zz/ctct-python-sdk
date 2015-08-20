@@ -1,0 +1,13 @@
+> constantcontact = ConstantContact(api_key, access_token)
+> response = constantcontact.get_verified_email_addresses()
+> print json.dumps(response, indent = 4, sort_keys = True)
+[
+    {
+        "email_address": "test@example.com", 
+        "status": "CONFIRMED"
+    }, 
+    {
+        "email_address": "test2@example.com", 
+        "status": "UNCONFIRMED"
+    }
+]

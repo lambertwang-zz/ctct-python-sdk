@@ -1,0 +1,33 @@
+> constantcontact = ConstantContact(api_key, access_token)
+> 
+> campaign_collection = constantcontact.get_campaigns()
+> campaign = campaign_collection.get_item(0).get_id()
+> 
+> response = constantcontact.get_campaign(campaign)
+> print json.dumps(response, indent = 4, sort_keys = True)
+{   
+    "created_date": "2015-01-01T00:00:00.000Z",
+    "from_email": "skeletor@example.com",
+    "from_name": "Constant Contact",
+    "greeting_name": "NONE",
+    "greeting_salutations": "",
+    "greeting_string": "",
+    "id": "1234567890123",
+
+    ...
+    
+    "status": "SENT",
+    "subject": "Here's a quick update from us",
+    "template_type": "STOCK",
+    "tracking_summary": {
+        "bounces": 0,
+        "clicks": 0,
+        "forwards": 0,
+        "opens": 0,
+        "sends": 7,
+        "spam_count": 0,
+        "unsubscribes": 0
+    },
+    "view_as_web_page_link_text": "Click here",
+    "view_as_web_page_text": "Having trouble viewing this email?"
+}

@@ -1,0 +1,15 @@
+> constantcontact = ConstantContact(api_key, access_token)
+>
+> folder = constantcontact.get_folders().get_item(7)
+> 
+> response = constantcontact.get_folder(folder)
+> print json.dumps(response, indent = 4, sort_keys = True)
+{
+    "children": [], 
+    "created_date": "2015-01-01T00:00:00.000z", 
+    "id": "-7", 
+    "item_count": 0, 
+    "level": 1, 
+    "modified_date": "2015-01-01T00:00:00.000z", 
+    "name": "cursed_amulets_minor"
+}

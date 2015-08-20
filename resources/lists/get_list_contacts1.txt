@@ -1,0 +1,64 @@
+> constantcontact = ConstantContact(api_key, access_token)
+> 
+> contact_list = constantcontact.get_lists()[2]
+>
+> response = constantcontact.get_list_contacts(contact_list)
+> print response
+{
+    "meta": {
+        "pagination": {
+            "next_link": "/v2/lists/1/contacts?next=somenextlinkidgoeshere"
+        }
+    },
+    "results":[
+        {
+            "id": "12345",
+            "status": "ACTIVE",
+            "addresses": [
+                {
+                    "line1": "Under a rock",
+                    "line2": "",
+                    "line3": "",
+                    "city": "Bikini Bottom",
+                    "address_type": "BUSINESS",
+                    "state_code":"HI",
+                    "country_code": "US",
+                    "postal_code": "",
+                    "sub_postal_code": ""
+                }
+            ],
+            "notes": [],
+            "confirmed": false,
+            "lists": [
+                {
+                    "id": "5000000000",
+                    "name": "Lives under a rock"
+                }
+            ],
+            "source": "API",
+            "email_addresses": [
+                {
+                    "status": "ACTIVE",
+                    "confirm_status": "CONFIRMED",
+                    "opt_in_source": "ACTION_BY_VISITOR",
+                    "opt_in_date": "2015-01-01T00:00:00.000Z",
+                    "opt_out_date": "2015-01-01T00:00:00.000Z",
+                    "email_address": "patrick_star@example.com"
+                }
+            ],
+            "prefix_name": "",
+            "first_name": "Patrick",
+            "middle_name": "",
+            "last_name": "Star",
+            "job_title": "Starfish",
+            "department_name": "",
+            "company_name": "",
+            "home_phone": "123-456-7890",
+            "work_phone": "",
+            "cell_phone": "",
+            "custom_fields": [],
+            "insert_date": "2015-01-01T00:00:00.000Z",
+            "last_update_date": "2015-01-01T00:00:00.000Z"
+        }
+    ]
+}

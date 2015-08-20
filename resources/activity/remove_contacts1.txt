@@ -1,0 +1,15 @@
+> constantcontact = ConstantContact(api_key, access_token)
+> 
+> import_data = []
+> import_data.append('snape@example.com')
+> 
+> lists = [constantcontact.get_lists()[0].get_id()]
+> 
+> response = constantcontact.remove_contacts(import_data, lists)
+> print json.dumps(response, indent = 4, sort_keys = True)
+{
+    "contact_count": 1, 
+    "error_count": 0, 
+    "id": "abcdefgh-ijkl-mnop-qrst-uvwxyz123456",
+    "type": "REMOVE_CONTACTS_FROM_LISTS"
+}

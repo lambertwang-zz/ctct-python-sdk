@@ -1,0 +1,16 @@
+> constantcontact = ConstantContact(api_key, access_token)
+> 
+> activity = constantcontact.activities_status_report()[0]
+> 
+> response = constantcontact.individual_activity_status(activity)
+> print json.dumps(response, indent = 4, sort_keys = True)
+{
+    "contact_count": 2, 
+    "created_date": "2000-00-00T00:00:00.000Z", 
+    "error_count": 0, 
+    "finish_date": "2000-00-00T00:00:00.000Z", 
+    "id": "12345678-9098-7654-3210-123456789098", 
+    "start_date": "2000-00-00T00:00:00.000Z", 
+    "status": "COMPLETE", 
+    "type": "ADD_CONTACTS"
+}

@@ -1,0 +1,49 @@
+> constantcontact = ConstantContact(api_key, access_token)
+>
+> response = constantcontact.get_folders(limit = 4)
+> print json.dumps(response, indent = 4, sort_keys = True)
+{
+    "meta": {
+        "pagination": {
+            "next_link": "/v2/library/folders?next=herebedragonsormaybejustmorefolders"
+        }
+    }, 
+    "results": [
+        {
+            "children": [], 
+            "created_date": "2015-01-01T00:00:00.000z", 
+            "id": "-5", 
+            "item_count": 0, 
+            "level": 1, 
+            "modified_date": "2015-01-01T00:00:00.000z", 
+            "name": "challenge_rating_8_encounters"
+        }, 
+        {
+            "children": [], 
+            "created_date": "2015-01-01T00:00:00.000z", 
+            "id": "-4", 
+            "item_count": 0, 
+            "level": 1, 
+            "modified_date": "2015-01-01T00:00:00.000z", 
+            "name": "bestiary_aa-ef"
+        }, 
+        {
+            "children": [], 
+            "created_date": "2015-01-01T00:00:00.000z", 
+            "id": "-3", 
+            "item_count": 0, 
+            "level": 1, 
+            "modified_date": "2015-01-01T00:00:00.000z", 
+            "name": "level_4_cleric_spells"
+        }, 
+        {
+            "children": [], 
+            "created_date": "2015-01-01T00:00:00.000z", 
+            "id": "-2", 
+            "item_count": 0, 
+            "level": 1, 
+            "modified_date": "2015-01-01T00:00:00.000z", 
+            "name": "touch_armor_levels_1-6"
+        }
+    ]
+}

@@ -1,0 +1,28 @@
+> constantcontact = ConstantContact(api_key, access_token)
+> account_info = Account_Info()
+> account_info.set_phone('0987654321')
+> account_info.set_organization_name('Constant Contact New York')
+> account_info.set_state_code('NY')
+> response = constantcontact.update_account_info(account_info)
+{
+    "company_logo": "", 
+    "country_code": "US", 
+    "email": "lambert_wang@example.com", 
+    "first_name": "Lambert", 
+    "last_name": "Wang", 
+    "organization_addresses": [
+        {
+            "city": "Waltham", 
+            "country_code": "US", 
+            "line1": "1601 Trapelo Road", 
+            "postal_code": "02451", 
+            "state": "Massachusetts", 
+            "state_code": "MA"
+        }
+    ], 
+    "organization_name": "Constant Contact New York", 
+    "phone": "0987654321", 
+    "state_code": "NY", 
+    "time_zone": "US/Eastern", 
+    "website": ""
+}

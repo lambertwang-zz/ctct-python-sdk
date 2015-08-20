@@ -1,0 +1,12 @@
+> constantcontact = ConstantContact(api_key, access_token)
+> 
+> schedule = Schedule()
+> tomorrow = (datetime.now() + timedelta(days=1)).replace(minute=0)
+> schedule.set_scheduled_date(tomorrow.isoformat())
+> 
+> response = constantcontact.post_campaign_schedules(new_campaign, schedule)
+> print json.dumps(response, indent = 4, sort_keys = True)
+{
+    "id": "1", 
+    "scheduled_date": "2015-01-02T00:00:00.000Z"
+}

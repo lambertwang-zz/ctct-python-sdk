@@ -1,0 +1,12 @@
+> constantcontact = ConstantContact(api_key, access_token)
+> 
+> response = constantcontact.post_lists('Is mayonnaise a list')
+> print json.dumps(response, indent = 4, sort_keys = True)
+{
+    "contact_count": 0, 
+    "created_date": "2015-01-01T00:00:00.000Z", 
+    "id": "3000000000", 
+    "modified_date": "2015-01-01T00:00:00.000Z", 
+    "name": "Is mayonnaise a list", 
+    "status": "ACTIVE"
+}

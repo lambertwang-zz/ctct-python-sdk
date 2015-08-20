@@ -1,0 +1,16 @@
+> constantcontact = ConstantContact(api_key, access_token)
+> 
+> event = constantcontact.get_events().get_item(0)
+>
+> item = constantcontact.get_event_items(event)[0]
+> 
+> attr = constantcontact.get_event_item_attributes(event, item)[0]
+> 
+> response = constantcontact.get_event_item_attribute(event, item, attr)
+> print json.dumps(response, indent = 4, sort_keys = True)
+{
+    "id": "1223333444455555", 
+    "name": "Bewitching", 
+    "quantity_available": 10, 
+    "quantity_total": 10
+}

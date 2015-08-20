@@ -1,0 +1,13 @@
+> constantcontact = ConstantContact(api_key, access_token)
+> 
+> campaign_collection = constantcontact.get_campaigns()
+> campaign = campaign_collection.get_item(1).get_id()
+> 
+> response = constantcontact.preview_campaign(campaign)
+> print json.dumps(response, indent = 4, sort_keys = True)
+{
+    "from_email": "skeletor@example.com", 
+    "preview_email_content": "&lt;head >&lt;meta />&lt;/head>&lt;body >...", 
+    "reply_to_email": "skeletor@example.com", 
+    "subject": "Come to Skeletor's BLOODBATH"
+}

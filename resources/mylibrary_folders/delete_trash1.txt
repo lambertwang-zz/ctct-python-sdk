@@ -1,0 +1,5 @@
+> constantcontact = ConstantContact(api_key, access_token)
+> 
+> response = constantcontact.delete_trash()
+> print response
+&lt;Response [204]&gt;

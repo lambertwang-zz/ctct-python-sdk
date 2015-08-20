@@ -1,0 +1,57 @@
+> constantcontact = ConstantContact(api_key, access_token)
+>
+> response = constantcontact.get_files(limit = 2)
+> print json.dumps(response, indent = 4, sort_keys = True)
+{
+    "meta": {
+        "pagination": {
+            "next_link": "/v2/library/files?next=aroundtheworld"
+        }
+    }, 
+    "results": [
+        {
+            "created_date": "2015-01-01T00:00:00.000z", 
+            "description": "around the world", 
+            "file_type": "PNG", 
+            "folder": "around_the_world", 
+            "folder_id": null, 
+            "height": 100, 
+            "id": "11", 
+            "is_image": true, 
+            "modified_date": "2015-01-01T00:00:00.000z", 
+            "name": "around_the_world", 
+            "size": 30000, 
+            "source": "MyComputer", 
+            "status": "Active", 
+            "thumbnail": {
+                "height": 100, 
+                "url": "aroundtheworld://aroundtheworld.aroundtheworld.aroundtheworld/around/the/world", 
+                "width": 100
+            }, 
+            "url": "aroundtheworld://aroundtheworld.aroundtheworld.aroundtheworld/around/the/world", 
+            "width": 100
+        }, 
+        {
+            "created_date": "2015-01-01T00:00:00.000z", 
+            "description": "around the world", 
+            "file_type": "PNG", 
+            "folder": "around_the_world", 
+            "folder_id": null, 
+            "height": 100, 
+            "id": "11", 
+            "is_image": true, 
+            "modified_date": "2015-01-01T00:00:00.000z", 
+            "name": "around_the_world", 
+            "size": 30000, 
+            "source": "MyComputer", 
+            "status": "Active", 
+            "thumbnail": {
+                "height": 100, 
+                "url": "aroundtheworld://aroundtheworld.aroundtheworld.aroundtheworld/around/the/world", 
+                "width": 100
+            }, 
+            "url": "aroundtheworld://aroundtheworld.aroundtheworld.aroundtheworld/around/the/world", 
+            "width": 100
+        }
+    ]
+}

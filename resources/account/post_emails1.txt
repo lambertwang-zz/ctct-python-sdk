@@ -1,0 +1,9 @@
+> constantcontact = ConstantContact(api_key, access_token)
+> new_email = 'test3@example.com'
+> response = constantcontact.post_verified_email_addresses(new_email)
+> print json.dumps(response, indent = 4, sort_keys = True)
+[
+    {
+        "email_address": "test3@example.com"
+    }
+]

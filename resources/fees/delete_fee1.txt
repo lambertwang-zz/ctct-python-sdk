@@ -1,0 +1,9 @@
+> constantcontact = ConstantContact(api_key, access_token)
+> 
+> event = constantcontact.get_events().get_item(0)
+>
+> fee = constantcontact.get_event_fees(event)[0]
+> 
+> response = constantcontact.delete_event_fee(event, fee)
+> print response
+&lt;Response [204]&gt;

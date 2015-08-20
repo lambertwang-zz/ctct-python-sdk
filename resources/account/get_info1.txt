@@ -1,0 +1,25 @@
+> constantcontact = ConstantContact(api_key, access_token)
+> response = constantcontact.get_account_info()
+> print json.dumps(response, indent = 4, sort_keys = True)
+{
+    "company_logo": "", 
+    "country_code": "US", 
+    "email": "lambert_wang@example.com", 
+    "first_name": "Lambert", 
+    "last_name": "Wang", 
+    "organization_addresses": [
+        {
+            "city": "Waltham", 
+            "country_code": "US", 
+            "line1": "1601 Trapelo Road", 
+            "postal_code": "02451", 
+            "state": "Massachusetts", 
+            "state_code": "MA"
+        }
+    ], 
+    "organization_name": "Constant Contact", 
+    "phone": "1234567890", 
+    "state_code": "MA", 
+    "time_zone": "US/Eastern", 
+    "website": ""
+}

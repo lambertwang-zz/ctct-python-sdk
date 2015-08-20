@@ -1,0 +1,89 @@
+<h2>Event</h2>
+<div id="docs">
+
+<div id="methodname">
+    class Event(dict)
+</div>
+<span id="methoddesc">
+    Event is a subclass of the basic python dictionary type and can use any method available to standard python dictionaries.
+    Any method that uses an Event model can also accept a properly formatted standard python dictionary.
+</span>
+<span id="methoddesc">
+    The following attributes have get, set, and delete methods (get_{attrName}, set_{attrName}, delete_{attrName}): 
+</span>
+
+<div class="code">[
+    'active_date',
+    'are_registrants_public',
+    'cancelled_date',
+    'created_date',
+    'currency_type',
+    'deleted_date',
+    'description',
+    'end_date',
+    'google_analytics_key',
+    'google_merchant_id',
+    'id',
+    'is_calendar_displayed',
+    'is_checkin_available',
+    'is_home_page_displayed',
+    'is_listed_in_external_directory',
+    'is_map_displayed',
+    'is_virtual_event',
+    'location',
+    'meta_data_tags',
+    'name',
+    'payable_to',
+    'paypal_account_email',
+    'registration_url',
+    'start_date',
+    'status',
+    'theme_name',
+    'time_zone_id',
+    'title',
+    'total_registered_count',
+    'type',
+    'twitter_hash_tag',
+    'updated_date'
+]
+</div>
+
+<div id="methodname">
+    Event.get_contact()
+</div>
+<span id="methoddesc">
+    Returns a dict.
+</span>
+
+<div id="methodname">
+    Event.set_contact(contact)
+</div>
+<span id="methoddesc">
+    Sets the event contact and trandslates fields if <span id="varname">contact</span> is a <div class="change-view" id="contact/component">Contact</div> object or an <div class="change-view" id="account_info/component">Account_Info</div> object.
+</span>
+
+<span id="methoddesc">
+    If <span id="varname">contact</span> is a <div class="change-view" id="contact/component">Contact</div> object, the event contact name is generated from <span id="varname">Contact['prefix_name']</span> + <span id="varname">Contact['first_name']</span> + <span id="varname">Contact['last_name']</span>, the event contact organization_name is <span id="varname">Contact['company_name']</span>, and the event contact phone_number is <span id="varname">Contact['work_phone']</span>. Other fields are straightforward.
+</span>
+
+<span id="methoddesc">
+    If <span id="varname">contact</span> is an <div class="change-view" id="account_info/component">Account_Info</div> object, the event contact name is generated from <span id="varname">Account_Info['first_name']</span> + <span id="varname">Account_Info['last_name']</span>. Other fields are straightforward.
+</span>
+
+<span id="methoddesc">
+    <span id="varname">contact</span> accepts a dict, <div class="change-view" id="contact/component">Contact</div> object, or <div class="change-view" id="account_info/component">Account_Info</div> object.
+</span>
+
+<div id="methodname">
+    Event.delete_contact()
+</div>
+<span id="methoddesc">
+    deletes the contact attribute of the event.
+</span>
+
+
+<div class="code" id="event/component1"><div id="expander">Show Unit Tests</div><div id="code-holder"></div></div>
+
+</div>
+
+<script src="scripts/load_code.js"></script>

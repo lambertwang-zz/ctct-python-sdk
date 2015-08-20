@@ -1,0 +1,7 @@
+> constantcontact = ConstantContact(api_key, access_token)
+>
+> file = constantcontact.get_files().get_item(0)
+> 
+> response = constantcontact.delete_file(file)
+> print response
+&lt;Response [204]&gt;

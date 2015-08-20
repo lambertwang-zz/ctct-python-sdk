@@ -1,0 +1,38 @@
+> constantcontact = ConstantContact(api_key, access_token)
+> 
+> event = constantcontact.get_events().get_item(0)
+>
+> response = constantcontact.get_event_registrants(event)
+> print json.dumps(response, indent = 4, sort_keys = True)
+{
+    "meta": {
+        "pagination": {
+        }
+    },
+    "results": [
+        {
+            "id": "1234567891234567890123456789012345678912345678901234567890123456789",
+            "email": "not_batman@example.com",
+            "first_name": "Bruce",
+            "guest_count": 0,
+            "last_name": "Wayne",
+            "payment_status": "NA",
+            "registration_status": "REGISTERED",
+            "registration_date": "2015-01-01T00:00:00.000Z",
+            "ticket_id": "ASDFGHJKL",
+            "updated_date": "2015-01-01T00:00:00.000Z",
+        },
+        {
+            "id": "abcdefghijklmnopqestuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ123456789012345",
+            "email": "not_superman@example.com",
+            "first_name": "Clark",
+            "guest_count": 0,
+            "last_name": "Kent",
+            "payment_status": "NA",
+            "registration_status": "REGISTERED",
+            "registration_date": "2015-01-01T00:00:00.000Z",
+            "ticket_id": "QWERTYUIO",
+            "updated_date": "2015-01-01T00:00:00.000Z",
+        }
+    ]
+}

@@ -1,0 +1,47 @@
+> constantcontact = ConstantContact(api_key, access_token)
+> 
+> new_campaign = Campaign()
+> new_campaign.set_name('Skeletor's Party)
+> new_campaign.set_subject('NONE CAN STOP ME')
+> new_campaign.set_from_name('Skeletor')
+> new_campaign.set_from_email('skeletor@example.com')
+> new_campaign.set_reply_to_email('skeletor@example.com')
+> new_campaign.set_email_content('&lt;html>&lt;body>&lt;h1>BEHOLD, THE POWER OF SKELETOR!&lt;/h1>&lt;/body>&lt;/html>')
+> new_campaign.set_text_content('Behold, the power of Skeletor!')
+> 
+> response = constantcontact.post_campaigns(new_campaign)
+> print json.dumps(response, indent = 4, sort_keys = True)
+{
+    "email_content": "&lt;html>&lt;body>&lt;h1>BEHOLD, THE POWER OF SKELETOR!&lt;/h1>&lt;/body>&lt;/html>", 
+    "email_content_format": "HTML", 
+    "from_email": "skeletor@example.com", 
+    "from_name": "Skeletor", 
+    "greeting_name": "NONE", 
+    "greeting_salutations": "", 
+    "greeting_string": "", 
+    "id": "1234567890124", 
+    "is_permission_reminder_enabled": false, 
+    "is_view_as_webpage_enabled": false, 
+
+    ...
+    
+    "name": "Skeletor's Party", 
+    "permission_reminder_text": "", 
+    "reply_to_email": "skeletor@example.com", 
+    "status": "DRAFT", 
+    "style_sheet": "", 
+    "subject": "NONE CAN STOP ME!", 
+    "template_type": "CUSTOM", 
+    "text_content": "Behold, the power of Skeletor!", 
+    "tracking_summary": {
+        "bounces": 0, 
+        "clicks": 0, 
+        "forwards": 0, 
+        "opens": 0, 
+        "sends": 0, 
+        "spam_count": 0, 
+        "unsubscribes": 0
+    }, 
+    "view_as_web_page_link_text": "", 
+    "view_as_web_page_text": ""
+}

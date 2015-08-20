@@ -1,0 +1,67 @@
+<h2>Item</h2>
+<div id="docs">
+
+<div id="methodname">
+    class Item(dict)
+</div>
+<span id="methoddesc">
+    Item is a subclass of the basic python dictionary type and can use any method available to standard python dictionaries.
+    Any method that uses an Item model can also accept a properly formatted standard python dictionary.
+</span>
+<span id="methoddesc">
+    The following attributes have get, set, and delete methods (get_{attrName}, set_{attrName}, delete_{attrName}): 
+</span>
+
+<div class="code">[
+    'default_quantity_available',
+    'default_quantity_total',
+    'description',
+    'id',
+    'name',
+    'per_registrant_limit',
+    'price',
+    'show_quantity_available'
+]
+</div>
+
+
+<div id="methodname">
+    Item.get_attributes()
+</div>
+<span id="methoddesc">
+    Returns a list of <div class="change-view" id="event/attribute">Attribute</div> objects.
+</span>
+
+<div id="methodname">
+    Item.set_attributes(attributes)
+</div>
+<span id="methoddesc">
+    <span id="varname">attributes</span> accepts a list or a <div class="change-view" id="result_set/component">Result_Set</div> of <div class="change-view" id="event/attribute">Attribute</div> objects.
+</span>
+
+<div id="methodname">
+    Item.delete_attribute_by_id(attribute_id)
+</div>
+<span id="methoddesc">
+    <span id="varname">attribute_id</span> accepts a string.
+</span>
+
+<div id="methodname">
+    Item.delete_attribute(index)
+</div>
+<span id="methoddesc">
+    <span id="varname">index</span> accepts an integer.
+</span>
+
+<div id="methodname">
+    Item.clear_attributes()
+</div>
+<span id="methoddesc">
+    Removes the attributes attribute of the object.
+</span>
+
+<div class="code" id="event/item1"><div id="expander">Show Unit Tests</div><div id="code-holder"></div></div>
+
+</div>
+
+<script src="scripts/load_code.js"></script>

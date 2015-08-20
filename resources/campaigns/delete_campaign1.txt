@@ -1,0 +1,8 @@
+> constantcontact = ConstantContact(api_key, access_token)
+> 
+> campaign_collection = constantcontact.get_campaigns()
+> campaign = campaign_collection.get_item(1).get_id()
+> 
+> response = constantcontact.delete_campaign(campaign)
+> print response
+&lt;Response [204]>

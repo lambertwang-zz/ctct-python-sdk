@@ -1,0 +1,33 @@
+> constantcontact = ConstantContact(api_key, access_token)
+> 
+> campaign = constantcontact.get_campaigns().get_item(0)
+> 
+> response = constantcontact.get_campaign_unsubscribes(campaign)
+> print json.dumps(response, indent = 4, sort_keys = True)
+{
+    "meta": {
+        "pagination": {
+            "next_link": "/v2/emailmarketing/campaigns/1234567890123/tracking/unsubscribes?next=abcdefghijklmnopqrstuvw"
+        }
+    }, 
+    "results": [
+        {
+            "activity_type": "EMAIL_UNSUBSCRIBE",
+            "campaign_id": "1234567890123",
+            "contact_id": "1234",
+            "email_address": "user1@example.com",
+            "bounce_date": "2015-01-01T00:00:00.000Z",
+            "unsubscribe_reason": "",
+            "unsubscribe_source": "ACTION_BY_CUSTOMER"
+        },
+        {
+            "activity_type": "EMAIL_UNSUBSCRIBE",
+            "campaign_id": "1234567890123",
+            "contact_id": "4321",
+            "email_address": "user2@example.com",
+            "bounce_date": "2015-01-01T00:00:00.000Z",
+            "unsubscribe_reason": "",
+            "unsubscribe_source": "ACTION_BY_CUSTOMER"
+        }
+    ]
+}

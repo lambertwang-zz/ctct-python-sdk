@@ -1,0 +1,24 @@
+> constantcontact = ConstantContact(api_key, access_token)
+> 
+> contact = constantcontact.get_contacts().get_item(0)
+>
+> response = constantcontact.get_contact_unsubscribes(contact)
+> print json.dumps(response, indent = 4, sort_keys = True)
+{
+    "meta": {
+        "pagination": {
+            "next_link": "/v2/contacts/1/tracking/bounces?next=abcdefghijklmnopqrstuvw"
+        }
+    }, 
+    "results": [
+        {
+            "activity_type": "EMAIL_UNSUBSCRIBE",
+            "campaign_id": "1234567890123",
+            "contact_id": "1234",
+            "email_address": "user1@example.com",
+            "bounce_date": "2015-01-01T00:00:00.000Z",
+            "unsubscribe_reason": "",
+            "unsubscribe_source": "ACTION_BY_CUSTOMER"
+        }
+    ]
+}

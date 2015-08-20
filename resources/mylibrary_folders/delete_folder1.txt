@@ -1,0 +1,7 @@
+> constantcontact = ConstantContact(api_key, access_token)
+>
+> folder = constantcontact.get_folders().get_item(7)
+> 
+> response = constantcontact.delete_folder(folder)
+> print response
+&lt;Response [204]&gt;

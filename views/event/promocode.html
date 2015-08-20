@@ -1,0 +1,71 @@
+<h2>Promocode</h2>
+<div id="docs">
+
+<div id="methodname">
+    class Promocode(dict)
+</div>
+<span id="methoddesc">
+    Promocode is a subclass of the basic python dictionary type and can use any method available to standard python dictionaries.
+    Any method that uses an Promocode model can also accept a properly formatted standard python dictionary.
+</span>
+<span id="methoddesc">
+    The following attributes have get, set, and delete methods (get_{attrName}, set_{attrName}, delete_{attrName}): 
+</span>
+
+<div class="code">[
+    'code_name',
+    'code_type',
+    'discount_amount',
+    'discount_percent',
+    'discount_scope',
+    'discount_type',
+    'id',
+    'is_paused',
+    'quantity_available',
+    'quantity_total',
+    'quantity_used'
+]
+</div>
+
+
+<div id="methodname">
+    Promocode.get_fee_ids()
+</div>
+<span id="methoddesc">
+    Returns a list of strings.
+</span>
+
+<div id="methodname">
+    Promocode.set_fee_ids(fee_ids)
+</div>
+<span id="methoddesc">
+    <span id="varname">fee_ids</span> accepts a list or a <div class="change-view" id="result_set/component">Result_Set</div> of dicts or <div class="change-view" id="event/fee">Fee</div> objects.
+</span>
+
+<div id="methodname">
+    Promocode.delete_fee_by_id(fee_id)
+</div>
+<span id="methoddesc">
+    <span id="varname">fee_id</span> accepts a string.
+</span>
+
+<div id="methodname">
+    Promocode.delete_fee(index)
+</div>
+<span id="methoddesc">
+    <span id="varname">index</span> accepts an integer.
+</span>
+
+<div id="methodname">
+    Promocode.clear_fee_ids()
+</div>
+<span id="methoddesc">
+    Removes the fee_ids attribute of the object.
+</span>
+
+
+<div class="code" id="event/promocode1"><div id="expander">Show Unit Tests</div><div id="code-holder"></div></div>
+
+</div>
+
+<script src="scripts/load_code.js"></script>

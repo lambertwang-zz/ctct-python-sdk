@@ -1,0 +1,63 @@
+> constantcontact = ConstantContact(api_key, access_token)
+> 
+> event = constantcontact.get_events().get_item(0)
+> registrant = constantcontact.get_event_registrants(event).get_item(0)
+>
+> response = constantcontact.get_event_registrant(event, registrant)
+> print json.dumps(response, indent = 4, sort_keys = True)
+{
+    "id": "1234567891234567890123456789012345678912345678901234567890123456789",
+    "sections": [
+        {
+            "label": "Personal Information",
+            "fields": [
+                {
+                    "type": "single_value",
+                    "name": "NAME_FIRST",
+                    "label": "First Name:",
+                    "value": "Bruce"
+                },
+                {
+                    "type": "single_value",
+                    "name": "NAME_LAST",
+                    "label": "Last Name:",
+                    "value": "Wayne"
+                },
+                {
+                    "type": "single_value",
+                    "name": "EMAIL_ADDRESS",
+                    "label": "Email Address:",
+                    "value": "not_batman@example.com"
+                }
+            ]
+        }
+    ],
+    "ticket_id": "ASDFGHJKL",
+    "registration_date": "2015-01-01T00:00:00.000Z",
+    "guests": {
+        "guest_count": 0,
+        "guest_info": []
+    },
+    "payment_summary":{
+        "order":{
+            "total":10.0,
+            "fees":[
+                {
+                    "id":"1223334444555556666667777777888888889999999",
+                    "name":"Bruce Wayne",
+                    "type":"My Fee",
+                    "quantity":1,
+                    "amount":10.0,
+                    "fee_period_type":"EARLY",
+                    "promo_type":"DISCOUNT"
+                },
+            ],
+            "items":[],
+            "order_id":"123-4567890",
+            "currency_type":"USD",
+            "order_date":"2015-01-01T00:00:00.000Z"
+        },
+        "payment_status":"PENDING",
+        "payment_type":"CHECK"
+    }
+}

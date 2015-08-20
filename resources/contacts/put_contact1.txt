@@ -1,0 +1,45 @@
+> constantcontact = ConstantContact(api_key, access_token)
+> 
+> contact_for_update = constantcontact.get_contact('1234567890')
+> contact_for_update.set_company_name('Black Mesa')
+> 
+> response = constantcontact.update_contact(contact_for_update)
+> print json.dumps(response, indent = 4, sort_keys = True)
+{
+    "addresses": [], 
+    "cell_phone": "", 
+    "company_name": "Black Mesa", 
+    "confirmed": false, 
+    "created_date": "2000-01-01T01:00:00.000Z", 
+    "custom_fields": [], 
+    "email_addresses": [
+        {
+            "confirm_status": "NO_CONFIRMATION_REQUIRED", 
+            "email_address": "chell@example.com", 
+            "id": "00000000-0000-0000-0000-000000000000", 
+            "opt_in_date": "2000-01-01T01:00:00.000Z", 
+            "opt_in_source": "ACTION_BY_OWNER", 
+            "status": "ACTIVE"
+        }
+    ], 
+    "fax": "", 
+    "first_name": "Chell", 
+    "home_phone": "", 
+    "id": "1234567890", 
+    "job_title": "Test Subject", 
+    "last_name": "[REDACTED]", 
+    "lists": [
+        {
+            "id": "0987654321", 
+            "status": "ACTIVE"
+        }
+    ], 
+    "middle_name": "", 
+    "modified_date": "2000-01-01T01:00:00.000Z", 
+    "notes": [], 
+    "prefix_name": "", 
+    "source": "API", 
+    "source_details": "testApp", 
+    "status": "ACTIVE", 
+    "work_phone": ""
+}

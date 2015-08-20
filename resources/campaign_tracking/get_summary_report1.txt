@@ -1,0 +1,15 @@
+> constantcontact = ConstantContact(api_key, access_token)
+> 
+> campaign = constantcontact.get_campaigns().get_item(0)
+> 
+> response = constantcontact.get_campaign_summary_report(campaign)
+> print json.dumps(response, indent = 4, sort_keys = True)
+{
+    "bounces": 2, 
+    "clicks": 7, 
+    "forwards": 1, 
+    "opens": 18, 
+    "sends": 20, 
+    "spam_count": 0, 
+    "unsubscribes": 0
+}

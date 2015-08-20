@@ -1,0 +1,125 @@
+<h2>Campaign</h2>
+<div id="docs">
+
+<div id="methodname">
+    class Campaign(dict)
+</div>
+<span id="methoddesc">
+    Campaign is a subclass of the basic python dictionary type and can use any method available to standard python dictionaries.
+    Any method that uses a Contact model can also accept a properly formatted standard python dictionary.
+</span>
+<span id="methoddesc">
+    The following attributes have get, set, and delete methods (get_{attrName}, set_{attrName}, delete_{attrName}): 
+</span>
+<div class="code">[
+    'created_date',
+    'email_content',
+    'email_content_format',
+    'from_email',
+    'from_name',
+    'greeting_name',
+    'greeting_salutations',
+    'greeting_string',
+    'id',
+    'is_permission_reminder_enabled',
+    'is_view_as_webpage_enabled',
+    'last_run_date',
+    'message_footer',
+    'modified_date',
+    'name',
+    'next_run_date',
+    'permalink_url',
+    'permission_reminder_text',
+    'reply_to_email',
+    'status',
+    'style_sheet',
+    'subject',
+    'template_type',
+    'text_content',
+    'view_as_web_page_link_text',
+    'view_as_web_page_text'
+]
+</div>
+
+
+<div id="methodname">
+    Campaign.get_click_through_details()
+</div>
+<span id="methoddesc">
+    Returns a dict.
+</span>
+
+<div id="methodname">
+    Campaign.get_click_through_detail(index)
+</div>
+<span id="methoddesc">
+    Returns a dict.
+</span>
+<span id="methoddesc">
+    <span id="varname">index</span> accepts an integer.
+</span>
+
+<div id="methodname">
+    Campaign.clear_click_through_details()
+</div>
+<span id="methoddesc">
+    Removes the <span id="varname">click_through_details</span> attribute of the object.
+</span>
+
+
+<div id="methodname">
+    Campaign.get_sent_to_contact_lists()
+</div>
+<span id="methoddesc">
+    Returns a list of strings.
+</span>
+
+<div id="methodname">
+    Campaign.add_to_contact_lists(list_id)
+</div>
+<span id="methoddesc">
+    <span id="varname">list_id</span> accepts a string or a <div class="change-view" id="contact_list/component">Contact_List</div> object.
+</span>
+
+<div id="methodname">
+    Campaign.remove_to_contact_lists_id(list_id)
+</div>
+<span id="methoddesc">
+    <span id="varname">list_id</span> accepts a string or a <div class="change-view" id="contact_list/component">Contact_List</div> object.
+</span>
+
+<div id="methodname">
+    Campaign.remove_to_contact_lists(index)
+</div>
+<span id="methoddesc">
+    <span id="varname">index</span> accepts an integer.
+</span>
+
+<div id="methodname">
+    Campaign.clear_to_contact_lists()
+</div>
+<span id="methoddesc">
+    Removes the <span id="varname">sent_to_contact_lists</span> attribute of the object.
+</span>
+
+
+<div id="methodname">
+    Campaign.get_tracking_summary()
+</div>
+<span id="methoddesc">
+    Returns a <div class="change-view" id="tracking_summary/component">Tracking_Summary</div> object.
+</span>
+
+<div id="methodname">
+    Campaign.delete_tracking_summary()
+</div>
+<span id="methoddesc">
+    Removes the <span id="varname">tracking_summary</span> attribute of the object.
+</span>
+
+
+<div class="code" id="campaign/component1"><div id="expander">Show Unit Tests</div><div id="code-holder"></div></div>
+
+<script src="scripts/load_code.js"></script>
+
+

@@ -1,0 +1,14 @@
+> constantcontact = ConstantContact(api_key, access_token)
+>
+> multipart = Multipart_File()
+> 
+> multipart.set_data(open('aroundtheworld.png', 'rb'))
+> multipart.set_description('around the world')
+> multipart.set_file_name('around_the_world')
+> multipart.set_file_type('PNG')
+> multipart.set_folder_id(0)
+> multipart.set_source('MyComputer')
+> 
+> response = constantcontact.constantcontact.post_files(multipart)
+> print response
+&lt;Response [202]&gt;

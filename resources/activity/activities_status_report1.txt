@@ -1,0 +1,46 @@
+> constantcontact = ConstantContact(api_key, access_token)
+> 
+> response = constantcontact.activities_status_report()
+> print json.dumps(response, indent = 4, sort_keys = True)
+[
+    {
+        "contact_count": 0, 
+        "created_date": "2000-00-00T00:00:00.000Z", 
+        "error_count": 0, 
+        "finish_date": "2000-00-00T00:00:00.000Z", 
+        "id": "idididid-idid-idid-idid-idididididid",
+        "start_date": "2000-00-00T00:00:00.000Z", 
+        "status": "COMPLETE", 
+        "type": "CLEAR_CONTACTS_FROM_LISTS"
+    },
+    {
+        "contact_count": 0, 
+        "created_date": "2000-00-00T00:00:00.000Z", 
+        "error_count": 0, 
+        "finish_date": "2000-00-00T00:00:00.000Z", 
+        "id": "1a2b3c4d-5e6f-7g8h-9i0j-1k2l3m4n5o6p",
+        "start_date": "2000-00-00T00:00:00.000Z", 
+        "status": "COMPLETE", 
+        "type": "EXPORT_CONTACTS"
+    },
+    {
+        "contact_count": 2, 
+        "created_date": "2000-00-00T00:00:00.000Z", 
+        "error_count": 0, 
+        "finish_date": "2000-00-00T00:00:00.000Z", 
+        "id": "12345678-9098-7654-3210-123456789098", 
+        "start_date": "2000-00-00T00:00:00.000Z", 
+        "status": "COMPLETE", 
+        "type": "ADD_CONTACTS"
+    },
+    {
+        "contact_count": 1, 
+        "created_date": "2000-00-00T00:00:00.000Z", 
+        "error_count": 0, 
+        "finish_date": "2000-00-00T00:00:00.000Z", 
+        "id": "abcdefgh-ijkl-mnop-qrst-uvwxyz123456",
+        "start_date": "2000-00-00T00:00:00.000Z", 
+        "status": "COMPLETE", 
+        "type": "REMOVE_CONTACTS_FROM_LISTS"
+    }
+]

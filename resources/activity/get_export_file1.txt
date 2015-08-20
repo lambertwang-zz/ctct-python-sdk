@@ -1,0 +1,13 @@
+> constantcontact = ConstantContact(api_key, access_token)
+> 
+> file_name = 'https://appconnect.constantcontact.com/v2/activities/exportfiles/t1h2e3f4-i5v6-e7s8-m9a0-s1h2g3o4d5s6.csv'
+>
+> response = constantcontact.get_export_file(file_name)
+> print response.content
+Email Address,Date Added,Added By,First Name
+falco_fox@example.com,1/1/2015 12:00:00 AM EDT,Site owner,Mango
+marth_shiek@example.com,1/1/2015 12:00:00 AM EDT,Site owner,Mew2King
+jigglypuff@example.com,1/1/2015 12:00:00 AM EDT,Site owner,HungryBox
+peach_fox@example.com,1/1/2015 12:00:00 AM EDT,Site owner,Armada
+falco_marth@example.com,1/1/2015 12:00:00 AM EDT,Site owner,PPMD
+loser@example.com,1/1/2015 12:00:00 AM EDT,Site owner,Leffen

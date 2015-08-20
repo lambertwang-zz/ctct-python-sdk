@@ -1,0 +1,9 @@
+> constantcontact = ConstantContact(api_key, access_token)
+> 
+> event = constantcontact.get_events().get_item(0)
+>
+> item = constantcontact.get_event_items(event)[0]
+> 
+> response = constantcontact.delete_event_item(event, item)
+> print json.dumps(response, indent = 4, sort_keys = True)
+&lt;Response [204]&gt;

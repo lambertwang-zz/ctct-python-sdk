@@ -1,0 +1,241 @@
+<h2>Contact</h2>
+<div id="docs">
+
+<div id="methodname">
+    class Contact(dict)
+</div>
+<span id="methoddesc">
+    Contact is a subclass of the basic python dictionary type and can use any method available to standard python dictionaries.
+    Any method that uses a Contact model can also accept a properly formatted standard python dictionary.
+</span>
+<span id="methoddesc">
+    The following attributes have get, set, and delete methods (get_{attrName}, set_{attrName}, delete_{attrName}): 
+</span>
+<div class="code">[
+    'custom_fields',
+    'prefix_name',
+    'first_name',
+    'middle_name',
+    'last_name',
+    'job_title',
+    'company_name',
+    'home_phone',
+    'work_phone',
+    'cell_phone',
+    'fax',
+    'confirmed',
+    'created_date',
+    'modified_date',
+    'source',
+    'source_details',
+    'id',
+    'status'
+]
+</div>
+
+
+<div id="methodname">
+    Contact.get_email_address()
+</div>
+<span id="methoddesc">
+    Returns an <div class="change-view" id="contact/email_address">Email_Address</div> object.
+</span>
+
+<div id="methodname">
+    Contact.set_email_address(email_address)
+</div>
+<span id="methoddesc">
+    <span id="varname">email_address</span> accepts a dict, string, or <div class="change-view" id="contact/email_address">Email_Address</div> object.
+</span>
+
+
+<div id="methodname">
+    Contact.get_addresses()
+</div>
+<span id="methoddesc">
+    Returns a list of <div class="change-view" id="contact/address">Address</div> objects.
+</span>
+
+<div id="methodname">
+    Contact.get_address(addr_type)
+</div>
+<span id="methoddesc">
+    Returns an <div class="change-view" id="contact/address">Address</div> object.
+</span>
+<span id="methoddesc">
+    <span id="varname">addr_type</span> accepts a string and is used to specify which address to retrieve ('PERSONAL' or 'BUSINESS').
+</span>
+
+<div id="methodname">
+    Contact.set_address(address)
+</div>
+<span id="methoddesc">
+    Checks the type of <span id="varname">address</span> and sets the contact's corresponding address.
+</span>
+<span id="methoddesc">
+    <span id="varname">address</span> accepts a dict or an <div class="change-view" id="contact/address">Address</div> object.
+</span>
+
+<div id="methodname">
+    Contact.remove_address(addr_type = None)
+</div>
+<span id="methoddesc">
+    Removes the address corresponding to <span id="varname">addr_type</span>. If None set, all addresses will be cleared.
+</span>
+<span id="methoddesc">
+    <span id="varname">addr_type</span> accepts a string and is used to specify which address to retrieve ('PERSONAL' or 'BUSINESS').
+</span>
+
+<div id="methodname">
+    Contact.clear_addresses()
+</div>
+<span id="methoddesc">
+    Removes all addresses.
+</span>
+
+
+<div id="methodname">
+    Contact.get_custom_field(index)
+</div>
+<span id="methoddesc">
+    Returns a dict of the custom field with the corresponding field name.
+</span>
+<span id="methoddesc">
+    <span id="varname">index</span> accepts an integer or a int-parsable string.
+</span>
+
+<div id="methodname">
+    Contact.set_custom_field(index, value)
+</div>
+<span id="methoddesc">
+    Removes the field if it already exists and creates a custom field with the corresponding name from the index and value.
+</span>
+<span id="methoddesc">
+    <span id="varname">index</span> accepts an integer or a int-parsable string.
+</span>
+<span id="methoddesc">
+    <span id="varname">value</span> accepts a string.
+</span>
+
+<div id="methodname">
+    Contact.remove_custom_field(index)
+</div>
+<span id="methoddesc">
+    Removes the custom field with the corresponding field name.
+</span>
+<span id="methoddesc">
+    <span id="varname">index</span> accepts an integer or a int-parsable string.
+</span>
+
+<div id="methodname">
+    Contact.clear_custom_fields()
+</div>
+<span id="methoddesc">
+    Removes all custom_fields.
+</span>
+
+
+<div id="methodname">
+    Contact.get_lists()
+</div>
+<span id="methoddesc">
+    Returns a list of <div class="change-view" id="contact_list/component">Contact_List</div> objects.
+</span>
+
+<div id="methodname">
+    Contact.set_lists(lists)
+</div>
+<span id="methoddesc">
+    Sets the lists attribute of the contact.
+</span>
+<span id="methoddesc">
+    <span id="varname">lists</span> accepts a list of dicts or <div class="change-view" id="contact_list/component">Contact_List</div> objects.
+</span>
+
+<div id="methodname">
+    Contact.get_list(index)
+</div>
+<span id="methoddesc">
+    Returns a <div class="change-view" id="contact_list/component">Contact_List</div> object;
+</span>
+<span id="methoddesc">
+    <span id="varname">index</span> accepts an integer.
+</span>
+
+<div id="methodname">
+    Contact.add_list_id(list_id)
+</div>
+<span id="methoddesc">
+    Adds a list with the specified list_id. 
+</span>
+<span id="methoddesc">
+    <span id="varname">list_id</span> accepts a string.
+</span>
+
+<div id="methodname">
+    Contact.add_list(contact_list)
+</div>
+<span id="methoddesc">
+    Adds a contact_list to the contact. 
+</span>
+<span id="methoddesc">
+    <span id="varname">contact_list</span> accepts a dict or a <div class="change-view" id="contact_list/component">Contact_List</div> object.
+</span>
+
+<div id="methodname">
+    Contact.remove_list_id(list_id)
+</div>
+<span id="methoddesc">
+    Removes the contact list from lists with the corresponding id. 
+</span>
+<span id="methoddesc">
+    <span id="varname">list_id</span> accepts a string.
+</span>
+
+<div id="methodname">
+    Contact.remove_list(index)
+</div>
+<span id="methoddesc">
+    Removes the contact list from lists with at the corresponding index. 
+</span>
+<span id="methoddesc">
+    <span id="varname">index</span> accepts an integer.
+</span>
+
+<div id="methodname">
+    Contact.remove_all_lists()
+</div>
+<span id="methoddesc">
+    Removes all lists.
+</span>
+
+
+<div id="methodname">
+    Contact.get_notes()
+</div>
+<span id="methoddesc">
+    Returns a dict..
+</span>
+
+<div id="methodname">
+    Contact.set_note(note)
+</div>
+<span id="methoddesc">
+    Sets the note of the contact.
+</span>
+<span id="methoddesc">
+    <span id="varname">note</span> accepts a dict or a string.
+</span>
+
+<div id="methodname">
+    Contact.clear_notes()
+</div>
+<span id="methoddesc">
+    Removes all notes.
+</span>
+
+
+
+<div class="code" id="contact/component1"><div id="expander">Show Unit Tests</div><div id="code-holder"></div></div>
+
+<script src="scripts/load_code.js"></script>

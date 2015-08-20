@@ -1,0 +1,8 @@
+> constantcontact = ConstantContact(api_key, access_token)
+> 
+> campaign = constantcontact.get_campaigns().get_item(0)
+> schedule = constantcontact.get_campaign_schedules(campaign)[0]
+> 
+> response = constantcontact.delete_campaign_schedule(campaign, schedule)
+> print response
+&lt;Response [204]>

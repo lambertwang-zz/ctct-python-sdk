@@ -1,0 +1,26 @@
+> constantcontact = ConstantContact(api_key, access_token)
+> 
+> contact1 = Contact()
+> contact1.set_email_address('dumbledore@example.com')
+> contact1.set_first_name('Albus')
+> 
+> contact2 = Contact()
+> contact2.set_email_address('snape@example.com')
+> contact2.set_first_name('Severus')
+> 
+> import_data = []
+> import_data.append(contact1)
+> import_data.append(contact2)
+> 
+> lists = [constantcontact.get_lists()[0].get_id()]
+> 
+> columns = ['EMAIL', 'FIRST NAME']
+> 
+> response = constantcontact.import_contacts(import_data, lists, columns)
+> print json.dumps(response, indent = 4, sort_keys = True)
+{
+    "contact_count": 2, 
+    "error_count": 0, 
+    "id": "12345678-9098-7654-3210-123456789098", 
+    "type": "ADD_CONTACTS"
+}

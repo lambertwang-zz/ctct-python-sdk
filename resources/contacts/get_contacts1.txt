@@ -1,0 +1,43 @@
+> constantcontact = ConstantContact(api_key, access_token)
+> 
+> response = constantcontact.get_contacts(limit = 5)
+> print json.dumps(response, indent = 4, sort_keys = True)
+{
+    "meta": {
+        "pagination": {
+            "next_link": "/v2/contacts?next=abcdefghijklmnopqrstuvwxyz123456789"
+        }
+    },
+    "results": [
+        {
+            "id": "1",
+            "status": "ACTIVE",
+            "fax": "",
+            "addresses": [],
+            "notes": [],
+            "confirmed": false,
+            "lists": [
+                {
+                    "id": "1",
+                    "status": "ACTIVE"
+                }
+            ],
+            "source": "Site Owner",
+            "email_addresses": [
+                {
+                    "id": "00000000-0000-0000-0000-000000000000",
+                    "status": "ACTIVE",
+                    "confirm_status": "NO_CONFIRMATION_REQUIRED",
+                    "opt_in_source": "ACTION_BY_OWNER",
+                    "opt_in_date": "2000-01-01T00:00:00.000Z",
+                    "email_address": "john-doe@example.com"
+                }
+            ],
+            "prefix_name": "Mr.",
+            "first_name": "John",
+            "middle_name": "",
+            "last_name": "Doe",
+            "job_title": "",
+...
+    ]
+}

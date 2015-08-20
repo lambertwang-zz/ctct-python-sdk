@@ -1,0 +1,32 @@
+> constantcontact = ConstantContact(api_key, access_token)
+> 
+> event = constantcontact.get_events().get_item(0)
+>
+> event.set_name('Inconspicuous meeting')
+>
+> response = constantcontact.update_event(event)
+> print json.dumps(response, indent = 4, sort_keys = True)
+{
+    "are_registrants_public": false, 
+    "contact": {
+        "email_address": "lex_luthor@example.com", 
+        "name": "Lex", 
+        "organization_name": "LexCorp", 
+        "phone_number": "111-111-1111"
+    }, 
+    "created_date": "1940-04-01T00:00:00.000Z", 
+    "currency_type": "USD", 
+    "end_date": "2016-01-01T00:00:00.000Z", 
+    "id": "1234567890987654321", 
+    "is_calendar_displayed": true, 
+    "is_checkin_available": false, 
+    "is_home_page_displayed": false, 
+    "is_listed_in_external_directory": false, 
+    "is_map_displayed": true, 
+    "is_virtual_event": false, 
+    "location": "The Daily Planet, Metropolis", 
+    "name": "Inconspicuous meeting", 
+
+    ...
+    
+}

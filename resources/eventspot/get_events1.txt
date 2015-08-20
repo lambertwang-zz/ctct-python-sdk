@@ -1,0 +1,34 @@
+> constantcontact = ConstantContact(api_key, access_token)
+> 
+> response = constantcontact.get_events(limit = 3)
+> print json.dumps(response, indent = 4, sort_keys = True)
+{
+    "meta": {
+        "pagination": {
+            "next_link": "/v2/eventspot/events?next=abcdefghijklmnopqrstuvwxyz"
+        }
+    }, 
+    "results": [
+        {
+            "created_date": "2015-01-01T00:00:00.000Z", 
+            "end_date": "2015-01-02T00:00:00.000Z", 
+            "event_detail_url": "/v2/eventspot/events/1a2b3c4d5e6f7g8hij0j", 
+            "id": "1a2b3c4d5e6f7g8hij0j", 
+            "is_checkin_available": false, 
+            "location": "THE SECRET MOONBASE", 
+            "name": "League of Super Evil Meeting", 
+            "start_date": "2015-08-06T15:00:00.000Z", 
+            "status": "DRAFT", 
+            "time_zone_id": "US/Eastern", 
+            "title": "SUPERVILLAINS GATHER", 
+            "total_registered_count": 0, 
+            "type": "OTHER"
+        }, 
+        {
+            "created_date": "2015-01-01T00:00:00.000Z", 
+            "end_date": "2015-01-02T00:00:00.000Z", 
+
+            ...
+
+    ]
+}

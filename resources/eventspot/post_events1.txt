@@ -1,0 +1,74 @@
+> constantcontact = ConstantContact(api_key, access_token)
+> 
+> start_date = datetime.now().replace(hours=0, minutes=0, seconds=0)
+>
+> verified_email_address = constantcontact.get_verified_email_addresses('CONFIRMED')[0]['email_address']
+> 
+> contact = Contact()
+> contact.set_email_address(verified_email_address)
+> contact.set_first_name('Lex')
+> contact.set_company_name('LexCorp')
+> contact.set_work_phone('111-111-1111')
+> 
+> event = Event()
+> event.set_end_date(end_date.isoformat())
+> event.set_name('Planning how to beat Superman')
+> event.set_title('please ignore')
+> event.set_contact(contact)
+> event.set_location('The Daily Planet, Metropolis')
+> event.set_time_zone_id('US/Eastern')
+> event.set_type('OTHER')
+> event.set_start_date(start_date.isoformat())
+> 
+> response = constantcontact.post_events(event)
+> print json.dumps(response, indent = 4, sort_keys = True)
+{
+    "are_registrants_public": false, 
+    "contact": {
+        "email_address": "lex_luthor@example.com", 
+        "name": "Lex", 
+        "organization_name": "LexCorp", 
+        "phone_number": "111-111-1111"
+    }, 
+    "created_date": "1940-04-01T00:00:00.000Z", 
+    "currency_type": "USD", 
+    "end_date": "2016-01-01T00:00:00.000Z", 
+    "id": "1234567890987654321", 
+    "is_calendar_displayed": true, 
+    "is_checkin_available": false, 
+    "is_home_page_displayed": false, 
+    "is_listed_in_external_directory": false, 
+    "is_map_displayed": true, 
+    "is_virtual_event": false, 
+    "location": "The Daily Planet, Metropolis", 
+    "name": "Planning how to beat Superman", 
+    "notification_options": [
+        {
+            "is_opted_in": false, 
+            "notification_type": "SO_REGISTRATION_NOTIFICATION"
+        }
+    ], 
+    "registration_url": "https://events.r20.constantcontact.com/register/event?oeidk=1234567890987654321", 
+    "start_date": "2015-01-01T00:00:00.000Z", 
+    "status": "DRAFT", 
+    "theme_name": "Default", 
+    "time_zone_id": "US/Eastern", 
+    "title": "please ignore", 
+    "total_registered_count": 0, 
+    "track_information": {
+        "guest_display_label": "Guest(s)", 
+        "guest_limit": 0, 
+        "information_sections": [
+            "CONTACT", 
+            "TIME", 
+            "LOCATION"
+        ], 
+        "is_guest_anonymous_enabled": false, 
+        "is_guest_name_required": false, 
+        "is_registration_closed_manually": false, 
+        "is_ticketing_link_displayed": false, 
+        "registration_limit_count": 0
+    }, 
+    "type": "OTHER", 
+    "updated_date": "1940-04-01T00:00:00.000Z"
+}
