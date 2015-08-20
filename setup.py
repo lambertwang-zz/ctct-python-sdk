@@ -17,7 +17,7 @@ with open(path.join(here, 'readme.md'), encoding='utf-8') as f:
     long_description = f.read()
 
 setup(
-    name='constantcontact',
+    name='constantcontact-unofficial',
     version=__version__,
     description='A Python SDK for the Constant Contact v2 API',
     long_description=long_description,
