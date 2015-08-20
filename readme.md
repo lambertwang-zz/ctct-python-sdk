@@ -13,4 +13,5 @@ $ pip install constantcontact
 
 ## Documentation
 
+The Github pages for this repo are located [here](http://magellantoo.github.io/ctct-python-sdk/)
 And the API Documentation can be found [here](http://developer.constantcontact.com/docs/developer-guides/api-documentation-index.html)
