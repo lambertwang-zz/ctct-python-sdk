@@ -10,14 +10,17 @@ from os import path
 
 from constantcontact import __version__
 
-here = path.abspath(path.dirname(__file__))
-
 # Get the long description from the relevant file
-with open(path.join(here, 'readme.md'), encoding='utf-8') as f:
-    long_description = f.read()
+try:
+    here = path.abspath(path.dirname(__file__))
+    with open(path.join(here, 'readme.md'), encoding='utf-8') as f:
+        long_description = f.read()
+except:
+    long_description = 'Description can be found at: https://github.com/magellantoo/ctct-python-sdk'
 
 setup(
-    name='constantcontact-unofficial',
+    name='constantcontact',
+    # Version found in /constantcontact/baseservice.py
     version=__version__,
     description='A Python SDK for the Constant Contact v2 API',
     long_description=long_description,

@@ -51,7 +51,7 @@ class ListService(BaseService):
         except:
             return response
         for i in range(len(response['results'])):
-            responsep['results'][i] = Contact(response['results'][i])
+            response['results'][i] = Contact(response['results'][i])
         return Result_Set(response)
 
     def validate_contact_list(self, contact_list):

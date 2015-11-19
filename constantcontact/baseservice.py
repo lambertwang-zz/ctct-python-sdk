@@ -1,7 +1,9 @@
 import requests
 import json
 
-__version__ = '0.3.0'
+from .components import Activity_Report, Campaign, Contact, Result_Set
+
+__version__ = '0.3.2'
 
 class BaseService():
     def __init__(self, client_id, token, base_url = 'https://api.constantcontact.com/v2'):
@@ -70,10 +72,14 @@ class BaseService():
 
     # The url from the pagination data can be directly passed into this method
     # Pagination is returned from the api in the form /v2/{service}?next={uuid}
-    # TODO: Return a Result_Set of specific components
     def next_page(self, url):
+        service = url.split('/', 2)[2].split('?', 1)[0]
         url = self.base_url + '/' + url.split('/', 2)[2]
-        response = requests.get(url, headers=self.header)
+        
+        # Set the api key for pagination request
+        params = {'api_key': self.client_id}
+
+        response = requests.get(url, headers=self.header, params = params)
 
         try:
             response = response if response is None else json.loads(response.content.decode('utf8'))
@@ -84,9 +90,26 @@ class BaseService():
             if response[0]['error_message']:
                 response = response[0]
         except:
-            pass
+            # Parse response into a resultset
+            if service == 'contacts':
+                for i in range(len(response['results'])):
+                    response['results'][i] = Contact(response['results'][i])
+            elif service == 'emailmarketing/campaigns':
+                for i in range(len(response['results'])):
+                    response['results'][i] = Campaign(response['results'][i])
+            elif service.split('/', 1)[0] == 'lists':
+                for i in range(len(response['results'])):
+                    response['results'][i] = Contact(response['results'][i])
+            elif service.split('/')[2] == 'tracking':
+                # Contact tracking
+                for i in range(len(response['results'])):
+                    response['results'][i] = Activity_Report(tracking_response['results'][i])
+            elif service.split('/')[3] == 'tracking':
+                # Email campaign tracking
+                for i in range(len(response['results'])):
+                    response['results'][i] = Activity_Report(tracking_response['results'][i])
 
-        return response
+        return Result_Set(response)
     
     # Prepares a multipart object into form_file and form_data into 
     # multipart/form-data content for a multipart post endpoint.
