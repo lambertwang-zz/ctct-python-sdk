@@ -44,7 +44,7 @@ class ListService(BaseService):
             queries['modified_since'] = modified_since
 
         list_id = self.list_to_id(list_id)
-        response = self.request('get', 'list/'+list_id+'/contacts', params = queries)
+        response = self.request('get', 'lists/'+list_id+'/contacts', params = queries)
 
         try:
             response['results']
