@@ -34,7 +34,7 @@ class ListService(BaseService):
 
     def delete_list(self, list_id):
         list_id = self.list_to_id(list_id)
-        return self.request('delete', 'list/'+list_id)
+        return self.request('delete', 'lists/'+list_id)
 
     # TODO: This method does not currently return a Result_Set of Contact components
     def get_list_contacts(self, list_id, limit = 50, modified_since = None):
@@ -44,7 +44,7 @@ class ListService(BaseService):
             queries['modified_since'] = modified_since
 
         list_id = self.list_to_id(list_id)
-        response = self.request('get', 'list/'+list_id+'/contacts', params = queries)
+        response = self.request('get', 'lists/'+list_id+'/contacts', params = queries)
 
         try:
             response['results']
