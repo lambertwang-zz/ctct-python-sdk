@@ -3,7 +3,7 @@ import json
 
 from .components import Activity_Report, Campaign, Contact, Result_Set
 
-__version__ = '0.3.3'
+__version__ = '0.3.4'
 
 class BaseService():
     def __init__(self, client_id, token, base_url = 'https://api.constantcontact.com/v2'):

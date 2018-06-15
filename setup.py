@@ -24,8 +24,8 @@ setup(
     version=__version__,
     description='A Python SDK for the Constant Contact v2 API',
     long_description=long_description,
-    url='http://developer.constantcontact.com/libraries/libraries.html',
-    author='Constant Contact Inc.',
+    url='https://github.com/lambertwang/ctct-python-sdk',
+    author='Lambert Wang',
     license='MIT',
 
     classifiers=[
