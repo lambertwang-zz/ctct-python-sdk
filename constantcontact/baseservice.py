@@ -103,11 +103,11 @@ class BaseService():
             elif service.split('/')[2] == 'tracking':
                 # Contact tracking
                 for i in range(len(response['results'])):
-                    response['results'][i] = Activity_Report(tracking_response['results'][i])
+                    response['results'][i] = Activity_Report(response['results'][i])
             elif service.split('/')[3] == 'tracking':
                 # Email campaign tracking
                 for i in range(len(response['results'])):
-                    response['results'][i] = Activity_Report(tracking_response['results'][i])
+                    response['results'][i] = Activity_Report(response['results'][i])
 
         return Result_Set(response)
     
